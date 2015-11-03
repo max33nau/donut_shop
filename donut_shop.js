@@ -36,34 +36,34 @@ table is. Also it gives a total column after all the hours have been generated.*
 var Time = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 var TimeYouWantToStart = Time[7]; // Assumes you Open in AM and  0 = 12AM
 var TimeYouWantToEnd = Time[6]; // Assumes You Close in the PM 0 = 12PM
-var TimeDuringDay = "<th></th>";
+var TimeDuringDay = "<th></th>"; //Blank Space in table
 var FinishedTimeTable = false;
 var HoursOpenedinAM;
 var HoursOpenedinPM;
 
 if ( TimeYouWantToStart === Time[0] ) {
-  TimeDuringDay += "<th>" + Time[0] + ":00 AM   </th>";
-  for (zz = 1; zz < 12; zz++) {
-   TimeDuringDay += "<th>" + zz + ":00 AM   </th>"
-  }
+    TimeDuringDay += "<th>" + Time[0] + ":00 AM   </th>";
+    for (zz = 1; zz < 12; zz++) {
+       TimeDuringDay += "<th>" + zz + ":00 AM   </th>"
+     }
   HoursOpenedinAM = 12;
-} else {
-  for ( zz = Time[ TimeYouWantToStart ]; zz < 12; zz++) {
-   TimeDuringDay += "<th>" + zz + ":00 AM   </th>";
-  }
-  HoursOpenedinAM = 12 - TimeYouWantToStart;
+ } else {
+    for ( zz = Time[ TimeYouWantToStart ]; zz < 12; zz++) {
+       TimeDuringDay += "<th>" + zz + ":00 AM   </th>";
+     }
+    HoursOpenedinAM = 12 - TimeYouWantToStart;
  }
 
-if (TimeYouWantToEnd === Time[0]) {
-   TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
-   HoursOpenedinPM = 1;
-} else {
-   TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
-   for (zz = 1; zz <= TimeYouWantToEnd; zz++) {
+if ( TimeYouWantToEnd === Time[0] ) {
+    TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
+    HoursOpenedinPM = 1;
+ } else {
+    TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
+    for (zz = 1; zz <= TimeYouWantToEnd; zz++) {
     TimeDuringDay += "<th>" + zz + ":00 PM   </th>";
     }
     HoursOpenedinPM = TimeYouWantToEnd + 1;
-}
+ }
 
 // Writes the hour generated above into the DOM
 var TimeTableString;
