@@ -65,10 +65,25 @@ if ( TimeYouWantToEnd === Time[0] ) {
     HoursOpenedinPM = TimeYouWantToEnd + 1;
  }
 
+var TimeTableHeading = "<tr id='TimeTable'> </tr>"
+var NumberOfLocations = "";
+
+ for (zz=0; zz<PotDonuts.length; zz++) {
+   NumberOfLocations += "<tr id=" + "'Location" + (zz+1) + "''" +"> </tr>";
+   console.log(NumberOfLocations)
+ }
+
+var debug = TimeTableHeading + NumberOfLocations;
+console.log(debug);
+ var tableContent = document.getElementById("table");
+ tableContent.innerHTML = TimeTableHeading + NumberOfLocations;
+
 // Writes the hour generated above into the DOM
 var TimeTableString;
 TimeTableString = document.getElementById("TimeTable");
 TimeTableString.innerHTML = TimeDuringDay + "<th> Total </th>";
+
+
 
 /* This for loop runs through each location and logs each of the
 objects properties. */
@@ -89,12 +104,11 @@ multiply it by the average number of donuts each customer buys per franchise. */
     var CurrentData = "<th>" + PotDonuts[ii].Shoplocation + "</th>";
     for( jj=1; jj <= hoursOpen; jj++ ) {
       AmountofPeopleEachHour[jj] = PotDonuts[ii].RandomNumberOfCustomers();
-      console.log("Number of Customers at hour " + jj + " of being opened = " +
-      AmountofPeopleEachHour[jj]);
       AmountofDonutsNeeded[jj] = Math.ceil(AmountofPeopleEachHour[jj] * PotDonuts[ii].AverageDonutsPerCustomer);
       CurrentData += "<td>" + AmountofDonutsNeeded[jj] + "</td>";
       totalDonuts += AmountofDonutsNeeded[jj];
     }
+    console.log(CurrentData);
     var Data = document.getElementById("Location" + (ii+1));
     Data.innerHTML = CurrentData + "<td>" + totalDonuts + "</td>";
     FinishedLocation = true;
