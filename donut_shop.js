@@ -1,4 +1,3 @@
-
 /* FUNCTION PotDonutShop allows you to create a object based on the parameters
 you enter, which create properties within the object. */
 function PotDonutShop(Shoplocation, MinCustomersPerHour, MaxCustomersPerHour, AverageDonutsPerCustomer) {
@@ -6,7 +5,7 @@ function PotDonutShop(Shoplocation, MinCustomersPerHour, MaxCustomersPerHour, Av
     this.MinCustomersPerHour = MinCustomersPerHour;
     this.MaxCustomersPerHour = MaxCustomersPerHour;
     this.AverageDonutsPerCustomer = AverageDonutsPerCustomer;
-}
+  }
 
 /*Declaring the 5 Different Donut Shop locations */
 var DonutShop1 = new PotDonutShop( "Downtown" , 8 , 43 , 4.50 );
@@ -27,90 +26,166 @@ var AmountofDonutsNeeded = [];
 number between the minimum and maximum number of customers that come into
 the different locations based on the properties within each object. */
 PotDonutShop.prototype.RandomNumberOfCustomers = function() {
-    return Math.floor( Math.random() * ( this.MaxCustomersPerHour - this.MinCustomersPerHour +1 ) ) + this.MinCustomersPerHour;
-}
+    return Math.floor( Math.random() * ( this.MaxCustomersPerHour - this.MinCustomersPerHour +1 ) )
+    + this.MinCustomersPerHour;
+  }
 
-/*This generates the top half of my table displaying what hours the franchises
-are open. If you change the time to starts or end they will change how long your
-table is. Also it gives a total column after all the hours have been generated.*/
-var Time = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var TimeYouWantToStart = Time[7]; // Assumes you Open in AM and  0 = 12AM
-var TimeYouWantToEnd = Time[6]; // Assumes You Close in the PM 0 = 12PM
-var TimeDuringDay = "<th></th>"; //Blank Space in table
-var FinishedTimeTable = false;
 var HoursOpenedinAM;
 var HoursOpenedinPM;
+var open = 7;
+var close = 6;
 
-if ( TimeYouWantToStart === Time[0] ) {
-    TimeDuringDay += "<th>" + Time[0] + ":00 AM   </th>";
-    for (zz = 1; zz < 12; zz++) {
-       TimeDuringDay += "<th>" + zz + ":00 AM   </th>"
-     }
-  HoursOpenedinAM = 12;
- } else {
-    for ( zz = Time[ TimeYouWantToStart ]; zz < 12; zz++) {
-       TimeDuringDay += "<th>" + zz + ":00 AM   </th>";
-     }
-    HoursOpenedinAM = 12 - TimeYouWantToStart;
- }
+function HoursOpen(open,close) {
+   /*This generates the top half of my table displaying what hours the franchises
+   are open. If you change the time to starts or end they will change how long your
+   table is. Also it gives a total column after all the hours have been generated.*/
+   var Time = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+   var TimeYouWantToStart = Time[open]; // Assumes you Open in AM and  0 = 12AM
+   var TimeYouWantToEnd = Time[close]; // Assumes You Close in the PM 0 = 12PM
+   var TimeDuringDay = "<th></th>"; //Blank Space in table
+   var FinishedTimeTable = false;
 
-if ( TimeYouWantToEnd === Time[0] ) {
-    TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
-    HoursOpenedinPM = 1;
- } else {
-    TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
-    for (zz = 1; zz <= TimeYouWantToEnd; zz++) {
-    TimeDuringDay += "<th>" + zz + ":00 PM   </th>";
+   if ( TimeYouWantToStart === Time[0] ) {
+      TimeDuringDay += "<th>" + Time[0] + ":00 AM   </th>";
+      for (zz = 1; zz < 12; zz++) {
+         TimeDuringDay += "<th>" + zz + ":00 AM   </th>"
+      }
+      HoursOpenedinAM = 12;
+   } else {
+      for ( zz = Time[ TimeYouWantToStart ]; zz < 12; zz++) {
+         TimeDuringDay += "<th>" + zz + ":00 AM   </th>";
+       }
+      HoursOpenedinAM = 12 - TimeYouWantToStart;
+   }
+
+   if ( TimeYouWantToEnd === Time[0] ) {
+      TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
+      HoursOpenedinPM = 1;
+   } else {
+      TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
+      for (zz = 1; zz <= TimeYouWantToEnd; zz++) {
+        TimeDuringDay += "<th>" + zz + ":00 PM   </th>";
+      }
+      HoursOpenedinPM = TimeYouWantToEnd + 1;
+   }
+
+   var TimeTableHeading = "<tr id='TimeTable'> </tr>"
+   var NumberOfLocations = "";
+
+   for (zz=0; zz<PotDonuts.length; zz++) {
+      NumberOfLocations += "<tr id=" + "'Location" + (zz+1) + "''" +"> </tr>";
+      console.log(NumberOfLocations)
     }
-    HoursOpenedinPM = TimeYouWantToEnd + 1;
- }
 
-var TimeTableHeading = "<tr id='TimeTable'> </tr>"
-var NumberOfLocations = "";
+   var debug = TimeTableHeading + NumberOfLocations;
+   console.log(debug);
+   var tableContent = document.getElementById("table");
+   tableContent.innerHTML = TimeTableHeading + NumberOfLocations;
 
- for (zz=0; zz<PotDonuts.length; zz++) {
-   NumberOfLocations += "<tr id=" + "'Location" + (zz+1) + "''" +"> </tr>";
-   console.log(NumberOfLocations)
- }
-
-var debug = TimeTableHeading + NumberOfLocations;
-console.log(debug);
- var tableContent = document.getElementById("table");
- tableContent.innerHTML = TimeTableHeading + NumberOfLocations;
-
-// Writes the hour generated above into the DOM
-var TimeTableString;
-TimeTableString = document.getElementById("TimeTable");
-TimeTableString.innerHTML = TimeDuringDay + "<th> Total </th>";
+   // Writes the hour generated above into the DOM
+   var TimeTableString;
+   TimeTableString = document.getElementById("TimeTable");
+   TimeTableString.innerHTML = TimeDuringDay + "<th> Total </th>";
+}
 
 
 
-/* This for loop runs through each location and logs each of the
-objects properties. */
-for (ii=0; ii<PotDonuts.length; ii++) {
-  var hoursOpen = HoursOpenedinAM + HoursOpenedinPM;
-  var FinishedLocation=false;
-  console.log("Current Donut Shop Location = " + PotDonuts[ii].Shoplocation);
-  console.log("Min Amount of Customers = " + PotDonuts[ii].MinCustomersPerHour);
-  console.log("Max Amount of Customers= " + PotDonuts[ii].MaxCustomersPerHour);
-  console.log("Average Donuts Per Customer = " + PotDonuts[ii].AverageDonutsPerCustomer);
+function createTable() {
+  console.log(open);
+  console.log(close);
+  HoursOpen(open,close);
+  /* This for loop runs through each location and logs each of the
+  objects properties. */
+  for (ii=0; ii<PotDonuts.length; ii++) {
+    var hoursOpen = HoursOpenedinAM + HoursOpenedinPM;
+    var FinishedLocation=false;
+    //console.log("Current Donut Shop Location = " + PotDonuts[ii].Shoplocation);
+    //console.log("Min Amount of Customers = " + PotDonuts[ii].MinCustomersPerHour);
+    //console.log("Max Amount of Customers= " + PotDonuts[ii].MaxCustomersPerHour);
+    //console.log("Average Donuts Per Customer = " + PotDonuts[ii].AverageDonutsPerCustomer);
 
-/* For each location, The for loop will cycle through each hour that the franchise
-is open. Then it will start to build a array with the values of donuts needed to be
-made for each hour. This is where I use the RandomNumberOfCustomers function and Then
-multiply it by the average number of donuts each customer buys per franchise. */
-  while(!FinishedLocation) {
-    var totalDonuts = 0;
-    var CurrentData = "<th>" + PotDonuts[ii].Shoplocation + "</th>";
-    for( jj=1; jj <= hoursOpen; jj++ ) {
-      AmountofPeopleEachHour[jj] = PotDonuts[ii].RandomNumberOfCustomers();
-      AmountofDonutsNeeded[jj] = Math.ceil(AmountofPeopleEachHour[jj] * PotDonuts[ii].AverageDonutsPerCustomer);
-      CurrentData += "<td>" + AmountofDonutsNeeded[jj] + "</td>";
-      totalDonuts += AmountofDonutsNeeded[jj];
+    /* For each location, The for loop will cycle through each hour that the franchise
+    is open. Then it will start to build a array with the values of donuts needed to be
+    made for each hour. This is where I use the RandomNumberOfCustomers function and Then
+    multiply it by the average number of donuts each customer buys per franchise. */
+    while(!FinishedLocation) {
+      var totalDonuts = 0;
+      var CurrentData = "<th>" + PotDonuts[ii].Shoplocation + "</th>";
+      for( jj=1; jj <= hoursOpen; jj++ ) {
+        AmountofPeopleEachHour[jj] = PotDonuts[ii].RandomNumberOfCustomers();
+        AmountofDonutsNeeded[jj] = Math.ceil(AmountofPeopleEachHour[jj] * PotDonuts[ii].AverageDonutsPerCustomer);
+        CurrentData += "<td>" + AmountofDonutsNeeded[jj] + "</td>";
+        totalDonuts += AmountofDonutsNeeded[jj];
+      }
+      //console.log(CurrentData);
+      var Data = document.getElementById("Location" + (ii+1));
+      Data.innerHTML = CurrentData + "<td>" + totalDonuts + "</td>";
+      FinishedLocation = true;
     }
-    console.log(CurrentData);
-    var Data = document.getElementById("Location" + (ii+1));
-    Data.innerHTML = CurrentData + "<td>" + totalDonuts + "</td>";
-    FinishedLocation = true;
   }
 }
+
+function buttonclick() {
+  var newLocation = document.getElementById("newlocation").value;
+  var newMin = Number(document.getElementById("newmin").value);
+  var newMax = Number(document.getElementById("newmax").value);
+  var newAverage = Number(document.getElementById("newaverage").value);
+  var NewDonutShop = new PotDonutShop(newLocation,newMin,newMax,newAverage);
+  var existinglocation = false;
+
+  if (newLocation.length < 1 || newMin.length < 1 || newMax < 1 || newAverage < 1) {
+    return;
+  }
+  //console.log(newLocation);
+  for (ii=0; ii < PotDonuts.length; ii++ ) {
+    if (newLocation === PotDonuts[ii].Shoplocation) {
+       PotDonuts[ii].MinCustomersPerHour = newMin;
+       PotDonuts[ii].MaxCustomersPerHour = newMax;
+       PotDonuts[ii].AverageDonutsPerCustomer = newAverage;
+       existinglocation = true;
+    }
+  }
+
+
+
+  if (existinglocation === false) {
+     PotDonuts.push(NewDonutShop);
+     //console.log(PotDonuts);
+     createTable();
+  } else {
+     createTable();
+     //console.log(PotDonuts);
+  }
+
+}
+
+function changetime() {
+  var newopen = Number(document.getElementById("useropentime").value);
+  var newclose = Number(document.getElementById("userclosetime").value);
+  open = newopen;
+  close = newclose;
+  createTable();
+}
+
+function GoBlazers() {
+  var changecolor = document.getElementById("Riddle");
+  changecolor.className = 'blazers';
+
+}
+
+function GoTimbers() {
+  var changecolor = document.getElementById("Riddle");
+  changecolor.className = 'timbers';
+
+}
+
+
+var ClickedLocation = document.getElementById("EventLocation");
+ClickedLocation.addEventListener('dblclick', function() {GoBlazers();}, false);
+
+var ClickedLocation = document.getElementById("EventTime");
+ClickedLocation.addEventListener('dblclick', function() {GoTimbers();}, false);
+
+
+
+createTable();
