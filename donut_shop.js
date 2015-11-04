@@ -86,7 +86,6 @@ function HoursOpen(open,close) {
    var TimeTableString;
    TimeTableString = document.getElementById("TimeTable");
    TimeTableString.innerHTML = TimeDuringDay + "<th> Total </th>";
-
 }
 
 
