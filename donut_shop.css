@@ -1,7 +1,7 @@
 
 /****** DEFAULT CLASS *****/
 
-.header {
+.defaultheader {
   background-color: #332730;
   border: 3px solid #BFC7BB;
   color: #BFC7BB;
@@ -83,7 +83,7 @@ font-family: sans-serif;
 letter-spacing: .1em;
 
 }
-.button {
+.defaultbutton {
   background-color: #787051;
   color: white;
   border: 1px solid #BFC7BB;
