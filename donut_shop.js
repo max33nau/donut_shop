@@ -172,15 +172,52 @@ function update() {
 }
 
 
-function GoBlazers() {
+function thanksgivinglayout() {
     var changecolor = document.getElementById("MainBody");
-    changecolor.className = 'blazers';
+    changecolor.className = 'thanksgivingmainbody';
+
+    var header = document.getElementById("header1");
+    header.className = 'thanksgivingheader';
+
+    var table = document.getElementById("table");
+    table.className = 'thanksgivingtable';
+
+    var fieldset = document.getElementById("EventTime");
+    fieldset.className = 'thanksgivingfieldset';
+    var fieldset1 = document.getElementById("EventLocation");
+    fieldset1.className = 'thanksgivingfieldset';
+
+    var legend1 = document.getElementById("Legend1");
+    legend1.className = 'thanksgivinglegend';
+    var legend2 = document.getElementById("Legend2");
+    legend2.className = 'thanksgivinglegend';
+
+    var button = document.getElementById("changetime");
+    button.className = "thanksgivingbutton";
+    var button1 = document.getElementById("AddLocation");
+    button1.className = "thanksgivingbutton";
+    var button2 = document.getElementById("Update");
+    button2.className = "thanksgivingbutton";
+    var button2 = document.getElementById("Update");
+    button2.className = "thanksgivingbutton";
+
+    var inputLocation = document.getElementById("newlocation");
+    inputLocation.className = "thanksgivinginput";
+    var inputopen = document.getElementById("useropentime");
+    inputopen.className = "thanksgivinginput";
+    var inputclose = document.getElementById("userclosetime");
+    inputclose.className = "thanksgivinginput";
+    var inputmin = document.getElementById("newmin");
+    inputmin.className = "thanksgivinginput";
+    var inputmax = document.getElementById("newmax");
+    inputmax.className = "thanksgivinginput";
+    var inputaverage = document.getElementById("newaverage");
+    inputaverage.className = "thanksgivinginput";
+
+    var unorderedlist = document.getElementById("UList");
+    unorderedlist.className = "thanksgivingunorderedlist";
   }
 
-function GoTimbers() {
-     var changecolor = document.getElementById("MainBody");
-     changecolor.className = 'timbers';
-  }
 
 /******** END OF FUNCTIONS  ********/
 
@@ -210,10 +247,8 @@ var revisedrow = "";
 
 /******** EASTER EGG EVENTS ********/
 
-/*var ClickedLocation = document.getElementById("EventLocation");
-ClickedLocation.addEventListener('dblclick', function() {GoBlazers();}, false);
-var ClickedLocation = document.getElementById("EventTime");
-ClickedLocation.addEventListener('dblclick', function() {GoTimbers();}, false); */
+var ClickedLocation = document.getElementById("thanksgiving");
+ClickedLocation.addEventListener('dblclick', function() {thanksgivinglayout();}, false);
 
 /******** END OF EASTER EGG EVENTS ********/
 

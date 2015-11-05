@@ -1,0 +1,69 @@
+.thanksgivingheader {
+  background-color: #54001C;
+  border: 3px solid #FFD254;
+  color: #FFD254;
+  margin-top: 10px;
+}
+
+.thanksgivingmainbody {
+  background-color: #402805;
+  color: #FFF9AA;
+  font-family: 'Andika', sans-serif;
+  margin:auto 100px;
+  max-width: 100%;
+}
+
+.thanksgivingunorderedlist {
+  list-style-image: url(turkey.png);
+}
+
+
+
+.thanksgivingfieldset {
+  border: 3px solid #FFD254;
+  padding: 20px;
+  margin: 0px 20px 20px 0px;
+  text-align: left;
+  display: inline-block;
+  color: #FFD254;
+  background-color: #54001C;
+
+}
+
+.thanksgivinglegend {
+  background-color: #FF3300;
+  color: #FCF0AB;
+  border: 3px solid #FFD254;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 1em;
+
+}
+
+.thanksgivingtable {
+  background-color: #54001C;
+  color: #FFD254;
+  border: 2px solid #FFD254;
+  margin: auto;
+  width: 600px;
+}
+
+.thanksgivingbutton {
+  background-color: #FF3300;
+  color: #FCF0AB;
+  border: 1px solid #FFD254;
+  border-radius: 10px;
+}
+
+.thanksgivinginput {
+background-color: #FFD254;
+color: #54001C;
+border: 1px solid #54001C;
+border-radius: 10px;
+padding: 5px 5px 5px 5px;
+margin-bottom: 5px;
+font-family: sans-serif;
+letter-spacing: .1em;
+
+}
