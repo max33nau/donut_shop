@@ -218,7 +218,6 @@ function layout(pagelayout) {
     unorderedlist.className = pagelayout + "unorderedlist";
   }
 
-
 /******** END OF FUNCTIONS  ********/
 
 /******** GLOBAL VARIABLES JOHN's FAVORITE ********/
