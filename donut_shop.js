@@ -172,50 +172,50 @@ function update() {
 }
 
 
-function thanksgivinglayout() {
+function layout(pagelayout) {
     var changecolor = document.getElementById("MainBody");
-    changecolor.className = 'thanksgivingmainbody';
+    changecolor.className = pagelayout + "mainbody";
 
     var header = document.getElementById("header1");
-    header.className = 'thanksgivingheader';
+    header.className = pagelayout + "header";
 
     var table = document.getElementById("table");
-    table.className = 'thanksgivingtable';
+    table.className = pagelayout + "table";
 
     var fieldset = document.getElementById("EventTime");
-    fieldset.className = 'thanksgivingfieldset';
+    fieldset.className = pagelayout + "fieldset";
     var fieldset1 = document.getElementById("EventLocation");
-    fieldset1.className = 'thanksgivingfieldset';
+    fieldset1.className = pagelayout + "fieldset";
 
     var legend1 = document.getElementById("Legend1");
-    legend1.className = 'thanksgivinglegend';
+    legend1.className = pagelayout + "legend";
     var legend2 = document.getElementById("Legend2");
-    legend2.className = 'thanksgivinglegend';
+    legend2.className = pagelayout + "legend";
 
     var button = document.getElementById("changetime");
-    button.className = "thanksgivingbutton";
+    button.className = pagelayout + "button";
     var button1 = document.getElementById("AddLocation");
-    button1.className = "thanksgivingbutton";
+    button1.className = pagelayout + "button";
     var button2 = document.getElementById("Update");
-    button2.className = "thanksgivingbutton";
+    button2.className = pagelayout + "button";
     var button2 = document.getElementById("Update");
-    button2.className = "thanksgivingbutton";
+    button2.className = pagelayout + "button";
 
     var inputLocation = document.getElementById("newlocation");
-    inputLocation.className = "thanksgivinginput";
+    inputLocation.className = pagelayout + "input";
     var inputopen = document.getElementById("useropentime");
-    inputopen.className = "thanksgivinginput";
+    inputopen.className = pagelayout + "input";
     var inputclose = document.getElementById("userclosetime");
-    inputclose.className = "thanksgivinginput";
+    inputclose.className = pagelayout + "input";
     var inputmin = document.getElementById("newmin");
-    inputmin.className = "thanksgivinginput";
+    inputmin.className = pagelayout + "input";
     var inputmax = document.getElementById("newmax");
-    inputmax.className = "thanksgivinginput";
+    inputmax.className = pagelayout + "input";
     var inputaverage = document.getElementById("newaverage");
-    inputaverage.className = "thanksgivinginput";
+    inputaverage.className = pagelayout + "input";
 
     var unorderedlist = document.getElementById("UList");
-    unorderedlist.className = "thanksgivingunorderedlist";
+    unorderedlist.className = pagelayout + "unorderedlist";
   }
 
 
@@ -248,7 +248,7 @@ var revisedrow = "";
 /******** EASTER EGG EVENTS ********/
 
 var ClickedLocation = document.getElementById("thanksgiving");
-ClickedLocation.addEventListener('dblclick', function() {thanksgivinglayout();}, false);
+ClickedLocation.addEventListener('dblclick', function() {layout("thanksgiving");}, false);
 
 /******** END OF EASTER EGG EVENTS ********/
 
