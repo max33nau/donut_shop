@@ -1,7 +1,7 @@
 
 /****** DEFAULT CLASS *****/
 
-#header {
+.header {
   background-color: #332730;
   border: 3px solid #BFC7BB;
   color: #BFC7BB;
@@ -64,12 +64,47 @@
 
 }
 
-#table {
+.defaulttable {
   background-color: #332730;
   color: #BFC7BB;
   border: 2px solid #BFC7BB;
   margin: auto;
   width: 600px;
+}
+
+.defaultinput {
+background-color: #BFC7BB;
+color: #332730;
+border: 1px solid #332730;
+border-radius: 10px;
+padding: 5px 5px 5px 5px;
+margin-bottom: 5px;
+font-family: sans-serif;
+letter-spacing: .1em;
+
+}
+.button {
+  background-color: #787051;
+  color: white;
+  border: 1px solid #BFC7BB;
+  border-radius: 10px;
+
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+}
+
+:-ms-input-placeholder {
+   color: black;
 }
 
 

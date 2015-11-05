@@ -3,23 +3,26 @@
     <head>
       <title> Top Pot Donuts </title>
       <link rel="stylesheet" type="text/css" href="donut_shop.css">
+      <link rel="stylesheet" type="text/css" href="thanksgiving.css">
       <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
     </head>
 
     <body id="MainBody" class="defaultmainbody">
 
-      <header id="header">
+      <header id="header1" class="header">
         <h1 id = "MainHeading" class="defaultheading"> Top Pots Donut Franchise </h1>
         <h3 id = "SubHeading" class = "defaultsubeading"> By: Max Jacobsen </h3>
       </header>
+
+      <h5 id="thanksgiving" class="thanksgivingchange"> Thanksgiving </h5>
 
       <div id= "initialText" class= "defaultmaintext">
         <p> Below is a table that shows the franchise locations of Top Pot Donuts in the first
           column. The number of donuts to make are our numbers next to those locations
           and are based on the hours of operation - 7:00 AM to 6:00 PM - and a few factors
           unique to each location: </p>
-        <ul class = "defaultunorderedlist">
+        <ul class = "defaultunorderedlist" id="UList">
           <li class ="defaultlist"> The mimimum number of customers per hour. </li>
           <li class ="defaultlist"> The maximum number of customers per hour. </li>
           <li class ="defaultlist"> The average number of donuts purchased per customer. </li>
@@ -35,38 +38,38 @@
 
     <div id="FirstFieldSet" class="defaultfieldsetcontent">
       <fieldset id = "EventTime" class = "defaultfieldset">
-        <legend class="defaultlegend"> Change Open and Close Times </legend>
+        <legend id="Legend1" class="defaultlegend"> Change Open and Close Times </legend>
         <label> Time you want to open (AM): </label>
-          <input type="text" name="open3" placeholder="Enter AM Time." id="useropentime" maxlength="2"
+          <input class="defaultinput" type="text" name="open3" placeholder="Enter AM Time." id="useropentime" maxlength="2"
           onkeypress="return (event.charCode >= 48 && event.charCode<=57)"/>
           <br />
         <label> Time you want to close (PM):  </label>
-          <input type="text" name="close3" placeholder="Enter PM Time." id="userclosetime" maxlength="2"
+          <input class="defaultinput" type="text" name="close3" placeholder="Enter PM Time." id="userclosetime" maxlength="2"
           onkeypress="return (event.charCode >= 48 && event.charCode<=57)"/>
           <br />
         <input id="changetime" class="button" type="button" value="Change Time" onclick="changetime()">
       </fieldset>
 
     <fieldset id="EventLocation" class = "defaultfieldset">
-        <legend class="defaultlegend"> Add Top Pot Donut Location </legend>
+        <legend id ="Legend2" class="defaultlegend"> Add Top Pot Donut Location </legend>
         <label> Shop Location: </label>
-          <input type="text" name="location" placeholder="Enter location here." id="newlocation"/>
+          <input class="defaultinput" type="text" name="location" placeholder="Enter location here." id="newlocation"/>
           <br />
         <label> Minimum Number of Customers Each Hour: </label>
-          <input type="text" name="mincustomers" placeholder="Enter number here." id="newmin"
+          <input class="defaultinput" type="text" name="mincustomers" placeholder="Enter number here." id="newmin"
           onkeypress="return (event.charCode >= 48 && event.charCode<=57)" maxlength="2"/>
           <br />
         <label> Maximum Number of Customers Each Hour: </label>
-          <input type="text" name="maxcustomers" placeholder="Enter number here." id="newmax"
+          <input  class="defaultinput" type="text" name="maxcustomers" placeholder="Enter number here." id="newmax"
             onkeypress="return (event.charCode >= 48 && event.charCode<=57)" maxlength="3"/>
           <br />
         <label> Average Number of Donuts Bought Per Customer: </label>
-          <input type="text" name="averagedonuts" placeholder="Enter number here." id="newaverage"
+          <input class="defaultinput" type="text" name="averagedonuts" placeholder="Enter number here." id="newaverage"
             onkeypress ="return (event.charCode >= 48 && event.charCode<=57) || event.charCode == 46" maxlength="4" />
           <br />
         <input id="AddLocation" class="button" type="button" value="Add Location" onclick="buttonclick()">
 
-        <input id="Update" class="locationadd" type="button" value="Update" onclick="update()">
+        <input id="Update" class="button" type="button" value="Update" onclick="update()">
     </fieldset>
   </div>
 
