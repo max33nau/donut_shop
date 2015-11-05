@@ -20,33 +20,30 @@ function HoursOpen(open,close) {
     var FinishedTimeTable = false;
 
     if ( TimeYouWantToStart === Time[0] ) {
-        TimeDuringDay += "<th>" + Time[0] + ":00 AM   </th>";
+        TimeDuringDay += "<th class = 'theading'>" + Time[0] + ":00 AM   </th>";
         for ( zz = 1; zz < 12; zz++ ) {
-           TimeDuringDay += "<th>" + zz + ":00 AM   </th>";
+           TimeDuringDay += "<th class = 'theading'>" + zz + ":00 AM   </th>";
            }
         HoursOpenedinAM = 12;
      } else {
         for ( zz = Time[ TimeYouWantToStart ]; zz < 12; zz++) {
-           TimeDuringDay += "<th>" + zz + ":00 AM   </th>";
+           TimeDuringDay += "<th class = 'theading'>" + zz + ":00 AM   </th>";
            }
         HoursOpenedinAM = 12 - TimeYouWantToStart;
      }
 
     if ( TimeYouWantToEnd === Time[0] ) {
-        TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
+        TimeDuringDay += "<th class = 'theading'>" + Time[0] + ":00 PM   </th>";
         HoursOpenedinPM = 1;
      } else {
-        TimeDuringDay += "<th>" + Time[0] + ":00 PM   </th>";
+        TimeDuringDay += "<th class = 'theading'>" + Time[0] + ":00 PM   </th>";
         for (zz = 1; zz <= TimeYouWantToEnd; zz++) {
-           TimeDuringDay += "<th>" + zz + ":00 PM   </th>";
+           TimeDuringDay += "<th class = 'theading'>" + zz + ":00 PM   </th>";
            }
         HoursOpenedinPM = TimeYouWantToEnd + 1;
      }
 
-    var TimeTableHeading = "<tr id='TimeTable'> </tr>"
-    var NumberOfLocations = "";
-
-    table = TimeDuringDay + "<th> Total </th>";
+    table = TimeDuringDay + "<th class = 'theading'> Total </th>";
 
   }
 
@@ -213,10 +210,10 @@ var revisedrow = "";
 
 /******** EASTER EGG EVENTS ********/
 
-var ClickedLocation = document.getElementById("EventLocation");
+/*var ClickedLocation = document.getElementById("EventLocation");
 ClickedLocation.addEventListener('dblclick', function() {GoBlazers();}, false);
 var ClickedLocation = document.getElementById("EventTime");
-ClickedLocation.addEventListener('dblclick', function() {GoTimbers();}, false);
+ClickedLocation.addEventListener('dblclick', function() {GoTimbers();}, false); */
 
 /******** END OF EASTER EGG EVENTS ********/
 

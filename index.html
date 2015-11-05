@@ -3,63 +3,73 @@
     <head>
       <title> Top Pot Donuts </title>
       <link rel="stylesheet" type="text/css" href="donut_shop.css">
+      <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
     </head>
 
-    <body id="MainBody" class="favoriteteam">
-      <h1> Donut Shop Model </h1>
-      <h3> By: Max Jacobsen </h3>
-      <p> Below is a table that shows the franchise locations of Top Pot Donuts in the first
-        column. The number of donuts to make are our numbers next to those locations
-        and are based on the hours of operation - 7:00 AM to 6:00 PM - and a few factors
-         unique to each location: </p>
-      <ul>
-        <li> The mimimum number of customers per hour. </li>
-        <li> The maximum number of customers per hour. </li>
-        <li> The average number of donuts purchased per customer. </li>
-      </ul>
+    <body id="MainBody" class="defaultmainbody">
 
-      <p> If you would like to change the store hours, please enter the time you want the franchises to
-        open and close below and then click the change time button. </p>
+      <header id="header">
+        <h1 id = "MainHeading" class="defaultheading"> Top Pots Donut Franchise </h1>
+        <h3 id = "SubHeading" class = "defaultsubeading"> By: Max Jacobsen </h3>
+      </header>
 
-      <fieldset id = "EventTime">
-          <legend> Change Open anc Close Times </legend>
-          <label> Time you want to open (AM): </label>
-            <input type="text" name="open3" placeholder="Enter AM Time." id="useropentime" maxlength="2"
-            onkeypress="return (event.charCode >= 48 && event.charCode<=57)"/>
-            <br />
-          <label> Time you want to close (PM):  </label>
-            <input type="text" name="close3" placeholder="Enter PM Time." id="userclosetime" maxlength="2"
-            onkeypress="return (event.charCode >= 48 && event.charCode<=57)"/>
-            <br />
-          <input id="changetime" class="changetime" type="button" value="Change Time" onclick="changetime()">
+      <div id= "initialText" class= "defaultmaintext">
+        <p> Below is a table that shows the franchise locations of Top Pot Donuts in the first
+          column. The number of donuts to make are our numbers next to those locations
+          and are based on the hours of operation - 7:00 AM to 6:00 PM - and a few factors
+          unique to each location: </p>
+        <ul class = "defaultunorderedlist">
+          <li class ="defaultlist"> The mimimum number of customers per hour. </li>
+          <li class ="defaultlist"> The maximum number of customers per hour. </li>
+          <li class ="defaultlist"> The average number of donuts purchased per customer. </li>
+        </ul>
+      </div>
+
+      <table id="table" class ="defaulttable"> </table>
+
+      <p>If you would like to change the store hours, please enter the time you want the franchises to
+        open and close below and then click the "Change Time" button. If you would like to add a location
+        to the table, please enter the required data in the Add Top Pot Donut Location form below and hit
+        the "Add Location" button. </p>
+
+    <div id="FirstFieldSet" class="defaultfieldsetcontent">
+      <fieldset id = "EventTime" class = "defaultfieldset">
+        <legend class="defaultlegend"> Change Open and Close Times </legend>
+        <label> Time you want to open (AM): </label>
+          <input type="text" name="open3" placeholder="Enter AM Time." id="useropentime" maxlength="2"
+          onkeypress="return (event.charCode >= 48 && event.charCode<=57)"/>
+          <br />
+        <label> Time you want to close (PM):  </label>
+          <input type="text" name="close3" placeholder="Enter PM Time." id="userclosetime" maxlength="2"
+          onkeypress="return (event.charCode >= 48 && event.charCode<=57)"/>
+          <br />
+        <input id="changetime" class="button" type="button" value="Change Time" onclick="changetime()">
       </fieldset>
 
-      <p> If you would like to add a location to the table, please enter the required
-        data in the form below and hit the "Add Location" button. </p>
+    <fieldset id="EventLocation" class = "defaultfieldset">
+        <legend class="defaultlegend"> Add Top Pot Donut Location </legend>
+        <label> Shop Location: </label>
+          <input type="text" name="location" placeholder="Enter location here." id="newlocation"/>
+          <br />
+        <label> Minimum Number of Customers Each Hour: </label>
+          <input type="text" name="mincustomers" placeholder="Enter number here." id="newmin"
+          onkeypress="return (event.charCode >= 48 && event.charCode<=57)" maxlength="2"/>
+          <br />
+        <label> Maximum Number of Customers Each Hour: </label>
+          <input type="text" name="maxcustomers" placeholder="Enter number here." id="newmax"
+            onkeypress="return (event.charCode >= 48 && event.charCode<=57)" maxlength="3"/>
+          <br />
+        <label> Average Number of Donuts Bought Per Customer: </label>
+          <input type="text" name="averagedonuts" placeholder="Enter number here." id="newaverage"
+            onkeypress ="return (event.charCode >= 48 && event.charCode<=57) || event.charCode == 46" maxlength="4" />
+          <br />
+        <input id="AddLocation" class="button" type="button" value="Add Location" onclick="buttonclick()">
 
-      <fieldset id="EventLocation">
-          <legend> Add Top Pot Donut Location </legend>
-          <label> Shop Location: </label>
-            <input type="text" name="location" placeholder="Enter location here." id="newlocation"/>
-            <br />
-          <label> Minimum Number of Customers Each Hour: </label>
-            <input type="text" name="mincustomers" placeholder="Enter number here." id="newmin"
-            onkeypress="return (event.charCode >= 48 && event.charCode<=57)" maxlength="2"/>
-            <br />
-          <label> Maximum Number of Customers Each Hour: </label>
-            <input type="text" name="maxcustomers" placeholder="Enter number here." id="newmax"
-              onkeypress="return (event.charCode >= 48 && event.charCode<=57)" maxlength="3"/>
-            <br />
-          <label> Average Number of Donuts Bought Per Customer: </label>
-            <input type="text" name="averagedonuts" placeholder="Enter number here." id="newaverage"
-              onkeypress ="return (event.charCode >= 48 && event.charCode<=57) || event.charCode == 46" maxlength="4" />
-            <br />
-          <input id="AddLocation" class="locationadd" type="button" value="Add Location" onclick="buttonclick()">
+        <input id="Update" class="locationadd" type="button" value="Update" onclick="update()">
+    </fieldset>
+  </div>
 
-          <input id="Update" class="locationadd" type="button" value="Update" onclick="update()">
-      </fieldset>
-
-      <table id="table"> </table>
 
     </body>
 
