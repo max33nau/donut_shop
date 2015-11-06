@@ -1,5 +1,6 @@
 /******** FUNCTIONS ********/
 
+//Creates Constructional Objects for Top Pots Donut Shops
 function PotDonutShop(Shoplocation, MinCustomersPerHour, MaxCustomersPerHour, AverageDonutsPerCustomer) {
     this.Shoplocation = Shoplocation;
     this.MinCustomersPerHour = MinCustomersPerHour;
@@ -7,11 +8,13 @@ function PotDonutShop(Shoplocation, MinCustomersPerHour, MaxCustomersPerHour, Av
     this.AverageDonutsPerCustomer = AverageDonutsPerCustomer;
   }
 
+//Generates random number of customers each hour based on min and max.
 PotDonutShop.prototype.RandomNumberOfCustomers = function() {
     return Math.floor( Math.random() * ( this.MaxCustomersPerHour - this.MinCustomersPerHour +1 ) )
     + this.MinCustomersPerHour;
   }
 
+// Generates top Row of the table with the times you want to open and close
 function HoursOpen(open,close) {
     var Time = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var TimeYouWantToStart = Time[open]; // Assumes you Open in AM and  0 = 12AM
@@ -42,11 +45,10 @@ function HoursOpen(open,close) {
            }
         HoursOpenedinPM = TimeYouWantToEnd + 1;
      }
-
     table = TimeDuringDay + "<th class = 'theading'> Total </th>";
-
   }
 
+//Puts in the content into the table from your initial five Pot Donut Shops
 function InitialTable() {
     for (ii=0; ii<PotDonuts.length; ii++) {
         var hoursOpen = HoursOpenedinAM + HoursOpenedinPM;
@@ -69,6 +71,8 @@ function InitialTable() {
      }
   }
 
+//Allows you to add a new row with a new location to your current table
+//Doesn't change previous data simply adds on to global variable table
 function AddLocation() {
     var newRow = "<tr id=" + "'Location" + (amountofLocations) + "''" +"> </tr>" +
                  "<th>" + PotDonuts[amountofLocations].Shoplocation + "</th>";
@@ -86,12 +90,14 @@ function AddLocation() {
 
   }
 
+//Writes the global varialbe table to DOM
 function writetoDOM () {
     var initialtable;
     initialtable = document.getElementById("table");
     initialtable.innerHTML = table;
   }
 
+//Happens when the button is clicked and adds a location to the table
 function buttonclick() {
     revisedrow = "";
     var newLocation = document.getElementById( "newlocation" ).value;
@@ -121,6 +127,7 @@ function buttonclick() {
      }
   }
 
+//When the change time button is clicked and then changes the initial table times
 function changetime() {
     var newopen = Number(document.getElementById("useropentime").value);
     var newclose = Number(document.getElementById("userclosetime").value);
@@ -145,6 +152,7 @@ function changetime() {
     writetoDOM();
   }
 
+// Updates a current location that has already been established
 function update() {
     console.log(PotDonuts);
     console.log("clicked");
@@ -171,7 +179,7 @@ function update() {
   writetoDOM();
 }
 
-
+// Changes the CSS layout of the page 
 function layout(pagelayout) {
     var changecolor = document.getElementById("MainBody");
     changecolor.className = pagelayout + "mainbody";
