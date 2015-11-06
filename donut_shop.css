@@ -6,6 +6,21 @@
   border: 3px solid #BFC7BB;
   color: #BFC7BB;
   margin-top: 10px;
+  height: 150px;
+}
+
+.defaultimage {
+  border-radius: 100%;
+  margin: 20px 40px;
+  display:block;
+  float: left;
+  width: 100px;
+  height: 109px;
+  margin:inherit inherit inherit 50px;
+}
+
+#headerimage2 {
+  float:right;
 }
 
 .defaultmainbody {
@@ -16,16 +31,19 @@
   max-width: 100%;
 }
 
-
-.defaultheading {
+.defaultheadings {
   font-family:'Shadows Into Light Two', cursive;
   text-align: center;
-  margin-bottom: -25px;
+  margin-top: 20px;
+  margin-right: 150px;
 }
 
-.defaultsubeading {
-  font-family:'Shadows Into Light Two', cursive;
-  text-align: center;
+.defaultheading {
+  margin-bottom: -20px;
+}
+
+.defaultsubheading {
+  margin-left: 100px;
 }
 
 .defaultmaintext {
@@ -33,13 +51,11 @@
 }
 
 .defaultunorderedlist {
-  list-style-image: url(darkdonut.jpg);
+  list-style-image: url(images/doughnut_burned.png);
 }
 
 .defaultlist {
   margin: 10px 10px;
-
-
 }
 
 .defaultfieldset {
@@ -50,10 +66,14 @@
   display: inline-block;
   color: #BFC7BB;
   background-color: #332730;
+}
 
+#EventTime {
+    margin: 15px;
 }
 
 .defaultlegend {
+  font-weight: bold;
   background-color: #787051;
   color: white;
   border: 3px solid #BFC7BB;
@@ -61,7 +81,6 @@
   padding: 10px 20px;
   text-align: left;
   font-size: 1em;
-
 }
 
 .defaulttable {
@@ -69,7 +88,7 @@
   color: #BFC7BB;
   border: 2px solid #BFC7BB;
   margin: auto;
-  width: 600px;
+  width: 800px;
 }
 
 .defaultinput {
@@ -81,7 +100,6 @@ padding: 5px 5px 5px 5px;
 margin-bottom: 5px;
 font-family: sans-serif;
 letter-spacing: .1em;
-
 }
 .defaultbutton {
   background-color: #787051;
@@ -118,8 +136,43 @@ th {
 
 
 td {
-  border-left: 1px solid #BFC7BB;
+  border-left: 1px solid white;
   text-align: center;
   vertical-align: center;
   font-size: 85%;
+}
+
+#layouts {
+  margin:auto;
+}
+
+#default {
+  padding: 5px 20px;
+  margin: 20px;
+}
+
+#default:hover {
+  background-color: purple;
+  color: white;
+}
+
+#thanksgiving {
+  padding: 5px 20px;
+  margin: 20px;
+}
+
+#thanksgiving:hover {
+  background-color: brown;
+  color: orange;
+}
+
+#christmas {
+  padding: 5px 20px;
+  margin: 20px;
+  border-right: 1px solid #BFC7BB;
+}
+
+#christmas:hover {
+  background-color: darkgreen;
+  color: red;
 }

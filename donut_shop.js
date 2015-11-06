@@ -216,6 +216,12 @@ function layout(pagelayout) {
 
     var unorderedlist = document.getElementById("UList");
     unorderedlist.className = pagelayout + "unorderedlist";
+
+    var mainimage1 = document.getElementById("headerimage");
+    mainimage1.src = "images/"+ pagelayout + ".jpg";
+
+    var mainimage2 = document.getElementById("headerimage2");
+    mainimage2.src = "images/"+ pagelayout + "1.jpg";
   }
 
 /******** END OF FUNCTIONS  ********/
@@ -249,6 +255,11 @@ var revisedrow = "";
 var ClickedLocation = document.getElementById("thanksgiving");
 ClickedLocation.addEventListener('dblclick', function() {layout("thanksgiving");}, false);
 
+var DefaultClickedLocation = document.getElementById("default");
+DefaultClickedLocation.addEventListener('dblclick', function() {layout("default");}, false);
+
+var ChristmasClickedLocation = document.getElementById("christmas");
+ChristmasClickedLocation.addEventListener('dblclick', function() {layout("christmas");}, false);
 /******** END OF EASTER EGG EVENTS ********/
 
 /******** Initial Webpage Load ********/

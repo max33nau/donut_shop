@@ -1,0 +1,66 @@
+.christmasheader {
+  background-color: #C21F1F;
+  border: 3px solid #FFFFFC;
+  color: #FFFFFC;
+  margin-top: 10px;
+  height: 150px;
+}
+
+.christmasmainbody {
+  background-color: #094201;
+  color: #C4EEFF;
+  font-family: 'Andika', sans-serif;
+  margin:auto 100px;
+  max-width: 100%;
+}
+
+.christmasunorderedlist {
+  list-style-image: url(images/snowman.png);
+}
+
+.christmasfieldset {
+  border: 3px solid #FFFFFC;
+  padding: 20px;
+  margin: 0px 20px 20px 0px;
+  text-align: left;
+  display: inline-block;
+  color: #FFFFFC;
+  background-color: #C21F1F;
+}
+
+.christmaslegend {
+  font-weight: bold;
+  background-color: #E36D6F;
+  color: #261901;
+  border: 3px solid #FFFFFC;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 1em;
+}
+
+.christmastable {
+  background-color: #C21F1F;
+  color: #FFFFFC;
+  border: 2px solid #FFFFFC;
+  margin: auto;
+  width: 800px;
+}
+
+.christmasinput {
+background-color: #FFFFFC;
+color: #C21F1F;
+border: 1px solid #C21F1F;
+border-radius: 10px;
+padding: 5px 5px 5px 5px;
+margin-bottom: 5px;
+font-family: sans-serif;
+letter-spacing: .1em;
+}
+
+.christmasbutton {
+  background-color: #E36D6F;
+  color: #261901;
+  border: 1px solid #FFFFFC;
+  border-radius: 10px;
+}

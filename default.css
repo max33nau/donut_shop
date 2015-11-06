@@ -1,0 +1,66 @@
+.defaultheader {
+  background-color: #332730;
+  border: 3px solid #BFC7BB;
+  color: #BFC7BB;
+  margin-top: 10px;
+  height: 150px;
+}
+
+.defaultmainbody {
+  background-color: #57324F;
+  color: #CFF9FF;
+  font-family: 'Andika', sans-serif;
+  margin:auto 100px;
+  max-width: 100%;
+}
+
+.defaultunorderedlist {
+  list-style-image: url(images/doughnut_burned.png);
+}
+
+.defaultfieldset {
+  border: 3px solid #BFC7BB;
+  padding: 20px;
+  margin: 0px 20px 20px 0px;
+  text-align: left;
+  display: inline-block;
+  color: #BFC7BB;
+  background-color: #332730;
+}
+
+.defaultlegend {
+  font-weight: bold;
+  background-color: #787051;
+  color: white;
+  border: 3px solid #BFC7BB;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 1em;
+}
+
+.defaulttable {
+  background-color: #332730;
+  color: #BFC7BB;
+  border: 2px solid #BFC7BB;
+  margin: auto;
+  width: 800px;
+}
+
+.defaultinput {
+background-color: #BFC7BB;
+color: #332730;
+border: 1px solid #332730;
+border-radius: 10px;
+padding: 5px 5px 5px 5px;
+margin-bottom: 5px;
+font-family: sans-serif;
+letter-spacing: .1em;
+}
+
+.defaultbutton {
+  background-color: #787051;
+  color: white;
+  border: 1px solid #BFC7BB;
+  border-radius: 10px;
+}
