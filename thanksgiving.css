@@ -3,6 +3,7 @@
   border: 3px solid #FFD254;
   color: #FFD254;
   margin-top: 10px;
+ height: 150px;
 }
 
 .thanksgivingmainbody {
@@ -14,9 +15,8 @@
 }
 
 .thanksgivingunorderedlist {
-  list-style-image: url(turkey.png);
+  list-style-image: url(images/turkey.png);
 }
-
 
 
 .thanksgivingfieldset {
@@ -31,6 +31,7 @@
 }
 
 .thanksgivinglegend {
+  font-weight: bold;
   background-color: #FF3300;
   color: #FCF0AB;
   border: 3px solid #FFD254;
@@ -46,7 +47,7 @@
   color: #FFD254;
   border: 2px solid #FFD254;
   margin: auto;
-  width: 600px;
+  width: 800px;
 }
 
 .thanksgivingbutton {

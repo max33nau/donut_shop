@@ -4,6 +4,8 @@
       <title> Top Pot Donuts </title>
       <link rel="stylesheet" type="text/css" href="donut_shop.css">
       <link rel="stylesheet" type="text/css" href="thanksgiving.css">
+      <link rel="stylesheet" type="text/css" href="default.css">
+      <link rel="stylesheet" type="text/css" href="christmas.css">
       <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet' type='text/css'>
     </head>
@@ -11,12 +13,23 @@
     <body id="MainBody" class="defaultmainbody">
 
       <header id="header1" class="defaultheader">
-        <h1 id = "MainHeading" class="defaultheading"> Top Pots Donut Franchise </h1>
-        <h3 id = "SubHeading" class = "defaultsubeading"> By: Max Jacobsen </h3>
+
+        <img id = "headerimage" class  = "defaultimage" src = "images/default.jpg" >
+        <img id = "headerimage2" class  = "defaultimage" src = "images/default1.jpg" >
+        <div class="defaultheadings">
+          <h1 id = "MainHeading" class="defaultheading"> Top Pots Donut Franchise </h1>
+          <h3 id = "SubHeading" class = "defaultsubheading"> By: Max Jacobsen </h3>
+        </div>
+
       </header>
-
-      <h5 id="thanksgiving" class="thanksgivingchange"> Thanksgiving </h5>
-
+      <table id ="layouts">
+        <tr>
+          <th> Page Color Layouts: </th>
+          <td id="default" class="defaultchange"> Default </td>
+          <td id="thanksgiving" class="thanksgivingchange"> Thanksgiving </td>
+          <td id="christmas" class="christmaschange"> Christmas </td>
+        </tr>
+      </table>
       <div id= "initialText" class= "defaultmaintext">
         <p> Below is a table that shows the franchise locations of Top Pot Donuts in the first
           column. The number of donuts to make are our numbers next to those locations
@@ -25,13 +38,13 @@
         <ul class = "defaultunorderedlist" id="UList">
           <li class ="defaultlist"> The mimimum number of customers per hour. </li>
           <li class ="defaultlist"> The maximum number of customers per hour. </li>
-          <li class ="defaultlist"> The average number of donuts purchased per customer. </li>
+          <li class ="defaultlist"> The average number of doughnuts purchased per customer. </li>
         </ul>
       </div>
 
       <table id="table" class ="defaulttable"> </table>
 
-      <p>If you would like to change the store hours, please enter the time you want the franchises to
+      <p> If you would like to change the store hours, please enter the time you want the franchises to
         open and close below and then click the "Change Time" button. If you would like to add a location
         to the table, please enter the required data in the Add Top Pot Donut Location form below and hit
         the "Add Location" button. </p>
