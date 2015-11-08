@@ -29,6 +29,18 @@
   background-color: #54001C;
 
 }
+.thanksgivingfieldset:hover {
+box-shadow:
+      1px 1px #FFD254,
+      2px 2px #FFD254,
+      3px 3px #FFD254,
+      4px 4px #FFD254;
+
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
+
 
 .thanksgivinglegend {
   font-weight: bold;
@@ -49,6 +61,18 @@
   margin: auto;
   width: 800px;
 }
+
+.thanksgivingtable:hover {
+box-shadow:
+      1px 1px #FFD254,
+      2px 2px #FFD254,
+      3px 3px #FFD254,
+      4px 4px #FFD254;
+
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
 
 .thanksgivingbutton {
   background-color: #FF3300;

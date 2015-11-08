@@ -56,7 +56,7 @@ function InitialTable() {
         while(!FinishedLocation) {
           var totalDonuts = 0;
 
-          var CurrentData = "<tr id=" + "'Location" + (ii+1) + "''" +"> </tr>" +
+          var CurrentData = "<tr id=" + "'Location" + (ii+1) + "''" +"> " +
           "<th>" + PotDonuts[ii].Shoplocation + "</th>";
             for( jj=1; jj <= hoursOpen; jj++ ) {
                 AmountofPeopleEachHour[jj] = PotDonuts[ii].RandomNumberOfCustomers();
@@ -65,7 +65,7 @@ function InitialTable() {
                 CurrentData += "<td>" + AmountofDonutsNeeded[jj] + "</td>";
                 totalDonuts += AmountofDonutsNeeded[jj];
              }
-          table +=  CurrentData + "<td>" + totalDonuts + "</td>";
+          table +=  CurrentData + "<td>" + totalDonuts + "</td> </tr>";
           FinishedLocation = true;
         }
      }
@@ -74,26 +74,25 @@ function InitialTable() {
 //Allows you to add a new row with a new location to your current table
 //Doesn't change previous data simply adds on to global variable table
 function AddLocation() {
-    var newRow = "<tr id=" + "'Location" + (amountofLocations) + "''" +"> </tr>" +
+    var newRow = "<tr id=" + "'Location" + (amountofLocations) + "''" +"> " +
                  "<th>" + PotDonuts[amountofLocations].Shoplocation + "</th>";
     var hoursOpen = HoursOpenedinAM + HoursOpenedinPM;
     var totalDonuts = 0;
     var newData = "";
     for( jj=1; jj <= hoursOpen; jj++ ) {
-        AmountofPeopleEachHour[jj] = PotDonuts[ii].RandomNumberOfCustomers();
+        AmountofPeopleEachHour[jj] = PotDonuts[amountofLocations].RandomNumberOfCustomers();
         AmountofDonutsNeeded[jj] = Math.ceil(AmountofPeopleEachHour[jj] *
-        PotDonuts[ii].AverageDonutsPerCustomer);
+        PotDonuts[amountofLocations].AverageDonutsPerCustomer);
         newData += "<td>" + AmountofDonutsNeeded[jj] + "</td>";
         totalDonuts += AmountofDonutsNeeded[jj];
      }
-     revisedrow +=  newRow + newData + "<td>" + totalDonuts + "</td>";
+     revisedrow +=  newRow + newData + "<td>" + totalDonuts + "</td> </tr>";
 
   }
 
 //Writes the global varialbe table to DOM
 function writetoDOM () {
-    var initialtable;
-    initialtable = document.getElementById("table");
+    var initialtable = document.getElementById("table");
     initialtable.innerHTML = table;
   }
 
@@ -179,7 +178,7 @@ function update() {
   writetoDOM();
 }
 
-// Changes the CSS layout of the page 
+// Changes the CSS layout of the page
 function layout(pagelayout) {
     var changecolor = document.getElementById("MainBody");
     changecolor.className = pagelayout + "mainbody";
@@ -232,6 +231,52 @@ function layout(pagelayout) {
     mainimage2.src = "images/"+ pagelayout + "1.jpg";
   }
 
+  function earthquake() {
+      var changecolor = document.getElementById("MainBody");
+      changecolor.className += " earthquake";
+
+      var header = document.getElementById("header1");
+      header.className +=" earthquake";
+
+      var table = document.getElementById("table");
+      table.className +=" earthquake";
+
+      var fieldset = document.getElementById("EventTime");
+      fieldset.className +=" earthquake";
+      var fieldset1 = document.getElementById("EventLocation");
+      fieldset1.className +=" earthquake";
+
+      var legend1 = document.getElementById("Legend1");
+      legend1.className +=" earthquake";
+      var legend2 = document.getElementById("Legend2");
+      legend2.className +=" earthquake";
+
+      var button = document.getElementById("changetime");
+      button.className +=" earthquake";
+      var button1 = document.getElementById("AddLocation");
+      button1.className +=" earthquake";
+      var button2 = document.getElementById("Update");
+      button2.className +=" earthquake";
+      var button2 = document.getElementById("Update");
+      button2.className +=" earthquake";
+
+      var inputLocation = document.getElementById("newlocation");
+      inputLocation.className +=" earthquake";
+      var inputopen = document.getElementById("useropentime");
+      inputopen.className +=" earthquake";
+      var inputclose = document.getElementById("userclosetime");
+      inputclose.className +=" earthquake";
+      var inputmin = document.getElementById("newmin");
+      inputmin.className +=" earthquake";
+      var inputmax = document.getElementById("newmax");
+      inputmax.className +=" earthquake";
+      var inputaverage = document.getElementById("newaverage");
+      inputaverage.className +=" earthquake";
+
+      var unorderedlist = document.getElementById("UList");
+      unorderedlist.className +=" earthquake";
+
+    }
 /******** END OF FUNCTIONS  ********/
 
 /******** GLOBAL VARIABLES JOHN's FAVORITE ********/
@@ -268,6 +313,9 @@ DefaultClickedLocation.addEventListener('dblclick', function() {layout("default"
 
 var ChristmasClickedLocation = document.getElementById("christmas");
 ChristmasClickedLocation.addEventListener('dblclick', function() {layout("christmas");}, false);
+
+var EarthquakeClickedLocation = document.getElementById("earthquake");
+EarthquakeClickedLocation.addEventListener('dblclick', function() {earthquake("earthquake");}, false);
 /******** END OF EASTER EGG EVENTS ********/
 
 /******** Initial Webpage Load ********/
