@@ -68,6 +68,17 @@
   background-color: #332730;
 }
 
+.defaultfieldset:hover {
+box-shadow:
+      1px 1px #BFC7BB,
+      2px 2px #BFC7BB,
+      3px 3px #BFC7BB,
+      4px 4px #BFC7BB;
+
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
 #EventTime {
     margin: 15px;
 }
@@ -90,6 +101,18 @@
   margin: auto;
   width: 800px;
 }
+
+.defaulttable:hover {
+  box-shadow:
+        1px 1px #BFC7BB,
+        2px 2px #BFC7BB,
+        3px 3px #BFC7BB,
+        4px 4px #BFC7BB;
+
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
 
 .defaultinput {
 background-color: #BFC7BB;
@@ -169,10 +192,28 @@ td {
 #christmas {
   padding: 5px 20px;
   margin: 20px;
-  border-right: 1px solid #BFC7BB;
+
 }
 
 #christmas:hover {
   background-color: darkgreen;
   color: red;
+}
+
+#earthquake {
+  padding: 5px 20px;
+  margin: 20px;
+}
+
+#earthquake:hover {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: earthquake;
+  animation-name: earthquake;
 }

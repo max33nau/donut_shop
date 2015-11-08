@@ -28,6 +28,17 @@
   background-color: #C21F1F;
 }
 
+.christmasfieldset:hover {
+box-shadow:
+      1px 1px #FFFFFC,
+      2px 2px #FFFFFC,
+      3px 3px #FFFFFC,
+      4px 4px #FFFFFC;
+
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
 .christmaslegend {
   font-weight: bold;
   background-color: #E36D6F;
@@ -45,6 +56,17 @@
   border: 2px solid #FFFFFC;
   margin: auto;
   width: 800px;
+}
+
+.christmastable:hover {
+box-shadow:
+      1px 1px #FFFFFC,
+      2px 2px #FFFFFC,
+      3px 3px #FFFFFC,
+      4px 4px #FFFFFC;
+
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
 }
 
 .christmasinput {
