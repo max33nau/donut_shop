@@ -1,0 +1,101 @@
+@media screen and (max-width: 925px) {
+  #MainBody {
+    margin: 5px;
+  }
+  .defaultheadings {
+    font-size: 10px;
+  }
+  .defaultheading {
+      margin-bottom: -10px;
+    }
+  #header1 {
+    height: 80px;
+  }
+  #headerimage {
+    width: 50px;
+    height: 50px;
+  }
+  #headerimage2{
+    width: 50px;
+    height: 50px;
+  }
+  .small{
+    font-size: 12px;
+  }
+  .defaultlist {
+    font-size: 12px;
+  }
+  th {
+    font-size: 10px;
+  }
+  tr {
+    font-size: 10px;
+  }
+  #table {
+    width: 200px;
+  }
+  #EventLocation {
+    font-size: 10px;
+    margin: 5px;
+  }
+  #EventTime {
+    font-size: 10px;
+    margin: 5px 20px;
+  }
+  .defaultinput {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #MainBody {
+    margin: 5px;
+  }
+  .defaultheadings {
+    font-size: 8px;
+  }
+  .defaultheading {
+    margin-bottom: -5px;
+  }
+  #header1 {
+    height: 80px;
+  }
+  #headerimage {
+    width: 50px;
+    height: 50px;
+  }
+  #headerimage2{
+    width: 50px;
+    height: 50px;
+  }
+  .small{
+    font-size: 12px;
+  }
+  .defaultlist {
+    font-size: 12px;
+  }
+  th {
+    margin: 0px;
+    padding: 2px;
+    font-size: 10px;
+  }
+  tr {
+    padding: 2px;
+    margin: 0px;
+    font-size: 10px;
+  }
+  #table {
+    max-width: 100%;
+    margin: 0;
+  }
+  #EventLocation {
+    font-size: 10px;
+    margin: 5px 5px 5px 50px;
+  }
+  #EventTime {
+    margin: 5px 5px 5px 80px;
+  }
+  .defaultinput {
+    font-size: 10px;
+  }
+}

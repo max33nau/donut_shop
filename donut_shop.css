@@ -1,9 +1,219 @@
-.blazers {
-  background-color: black;
+
+/****** DEFAULT CLASS *****/
+
+.defaultheader {
+  background-color: #332730;
+  border: 3px solid #BFC7BB;
+  color: #BFC7BB;
+  margin-top: 10px;
+  height: 150px;
+}
+
+.defaultimage {
+  border-radius: 100%;
+  margin: 20px 40px;
+  display:block;
+  float: left;
+  width: 100px;
+  height: 109px;
+  margin:inherit inherit inherit 50px;
+}
+
+#headerimage2 {
+  float:right;
+}
+
+.defaultmainbody {
+  background-color: #57324F;
+  color: #CFF9FF;
+  font-family: 'Andika', sans-serif;
+  margin:auto 100px;
+  max-width: 100%;
+}
+
+.defaultheadings {
+  font-family:'Shadows Into Light Two', cursive;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 150px;
+}
+
+.defaultheading {
+  margin-bottom: -20px;
+}
+
+.defaultsubheading {
+  margin-left: 100px;
+}
+
+.defaultmaintext {
+  font-size: 1.2em;
+}
+
+.defaultunorderedlist {
+  list-style-image: url(images/doughnut_burned.png);
+}
+
+.defaultlist {
+  margin: 10px 10px;
+}
+
+.defaultfieldset {
+  border: 3px solid #BFC7BB;
+  padding: 20px;
+  margin: 0px 20px 20px 0px;
+  text-align: left;
+  display: inline-block;
+  color: #BFC7BB;
+  background-color: #332730;
+}
+
+.defaultfieldset:hover {
+box-shadow:
+      1px 1px #BFC7BB,
+      2px 2px #BFC7BB,
+      3px 3px #BFC7BB,
+      4px 4px #BFC7BB;
+
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
+#EventTime {
+    margin: 15px;
+}
+
+.defaultlegend {
+  font-weight: bold;
+  background-color: #787051;
+  color: white;
+  border: 3px solid #BFC7BB;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 1em;
+}
+
+.defaulttable {
+  background-color: #332730;
+  color: #BFC7BB;
+  border: 2px solid #BFC7BB;
+  margin: auto;
+  width: 800px;
+}
+
+.defaulttable:hover {
+  box-shadow:
+        1px 1px #BFC7BB,
+        2px 2px #BFC7BB,
+        3px 3px #BFC7BB,
+        4px 4px #BFC7BB;
+
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+
+.defaultinput {
+background-color: #BFC7BB;
+color: #332730;
+border: 1px solid #332730;
+border-radius: 10px;
+padding: 5px 5px 5px 5px;
+margin-bottom: 5px;
+font-family: sans-serif;
+letter-spacing: .1em;
+}
+.defaultbutton {
+  background-color: #787051;
+  color: white;
+  border: 1px solid #BFC7BB;
+  border-radius: 10px;
+
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+}
+
+:-ms-input-placeholder {
+   color: black;
+}
+
+
+th {
+  font-family:'Shadows Into Light Two', cursive;
+  letter-spacing: 0.1em;
+  font-size: 90%;
+  text-align: center;
+  padding: 7px 10px 10px 10px;
+}
+
+
+td {
+  border-left: 1px solid white;
+  text-align: center;
+  vertical-align: center;
+  font-size: 85%;
+}
+
+#layouts {
+  margin:auto;
+}
+
+#default {
+  padding: 5px 20px;
+  margin: 20px;
+}
+
+#default:hover {
+  background-color: purple;
+  color: white;
+}
+
+#thanksgiving {
+  padding: 5px 20px;
+  margin: 20px;
+}
+
+#thanksgiving:hover {
+  background-color: brown;
+  color: orange;
+}
+
+#christmas {
+  padding: 5px 20px;
+  margin: 20px;
+
+}
+
+#christmas:hover {
+  background-color: darkgreen;
   color: red;
 }
 
-.timbers {
-  background-color: darkgreen;
-  color: white;
+#earthquake {
+  padding: 5px 20px;
+  margin: 20px;
+}
+
+#earthquake:hover {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: earthquake;
+  animation-name: earthquake;
 }
